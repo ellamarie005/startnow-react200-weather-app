@@ -11,8 +11,17 @@ export default class App extends React.Component {
         <div className='row'>
           <form className='col-md-12 mb-3'>
             <div className='input-group'>
+            <div className='input-group'>
+              <div className='btn-group'>
+                <button className='btn btn-primary'>San Diego</button>
+                <button className='btn btn-primary'>New York</button>
+                <button className='btn btn-primary'>Washington D.C.</button>
+                <button className='btn btn-primary'>London</button>
+                <button className='btn btn-primary'>Tokyo</button>
+              </div>
+              </div>
               <input type='city' className='form-control' placeholder='Enter City' />
-              <div class="input-group-append">
+              <div className="input-group-append">
                 <button className='btn btn-outline-secondary' type='button'>Go!</button>
               </div>
             </div>
@@ -21,7 +30,7 @@ export default class App extends React.Component {
         <div className='row'>
           <div className='col-md-6'>
             <div className='card'>
-              <h5 className='card-header'>City Information</h5>
+              <h5 className='card-header alert alert-primary'>City Information</h5>
               <div className='card-body'>
                 <h3>Tokyo</h3>
               </div>
@@ -29,10 +38,10 @@ export default class App extends React.Component {
           </div>
           <div className='col-md'>
             <div className='card'>
-              <h5 className='card-header'>Search History</h5>
+              <h5 className='card-header alert alert-primary'>Search History</h5>
               <div className='card-body'>
                 <ul>
-                  <li>cityyy</li>
+                  <li>city</li>
                 </ul>
               </div>
             </div>
