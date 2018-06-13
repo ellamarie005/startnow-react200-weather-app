@@ -11,14 +11,14 @@ export default class App extends React.Component {
         <div className='row'>
           <form className='col-md-12 mb-3'>
             <div className='input-group'>
-            <div className='input-group'>
-              <div className='btn-group'>
-                <button className='btn btn-primary'>San Diego</button>
-                <button className='btn btn-primary'>New York</button>
-                <button className='btn btn-primary'>Washington D.C.</button>
-                <button className='btn btn-primary'>London</button>
-                <button className='btn btn-primary'>Tokyo</button>
-              </div>
+              <div className='input-group'>
+                <div className='btn-group'>
+                  <button className='btn btn-primary'>San Diego</button>
+                  <button className='btn btn-primary'>New York</button>
+                  <button className='btn btn-primary'>Washington D.C.</button>
+                  <button className='btn btn-primary'>London</button>
+                  <button className='btn btn-primary'>Tokyo</button>
+                </div>
               </div>
               <input type='city' className='form-control' placeholder='Enter City' />
               <div className="input-group-append">
@@ -33,6 +33,29 @@ export default class App extends React.Component {
               <h5 className='card-header alert alert-primary'>City Information</h5>
               <div className='card-body'>
                 <h3>Tokyo</h3>
+                <br />
+                <div className='row'>
+                  <div className='col-sm-4'>
+                    <div className='card'>Temperature(F)</div>
+                  </div>
+                  <div className='col-sm-4'>
+                    <div className='card'>Pressure</div>
+                  </div>
+                  <div className='col-sm-4'>
+                    <div className='card'>Humidity</div>
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='col-sm-4'>
+                    <div className='card'>Lowest Temperature(F)</div>
+                  </div>
+                  <div className='col-sm-4'>
+                    <div className='card'>Highest Temperature(F)</div>
+                  </div>
+                  <div className='col-sm-4'>
+                    <div className='card'>Wind Speed</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
