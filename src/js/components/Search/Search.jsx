@@ -32,11 +32,11 @@ export default class Search extends React.Component {
           <div className='input-group'>
             <div className='input-group'>
               <div className='btn-group'>
-                <button className='btn btn-primary'>San Diego</button>
-                <button className='btn btn-primary'>New York</button>
-                <button className='btn btn-primary'>Washington D.C.</button>
-                <button className='btn btn-primary'>London</button>
-                <button className='btn btn-primary'>Tokyo</button>
+                <button className='btn btn-primary' value='San Diego'>San Diego</button>
+                <button className='btn btn-primary' value='New York'>New York</button>
+                <button className='btn btn-primary' value ='Washington D.C.'>Washington D.C.</button>
+                <button className='btn btn-primary' value='London'>London</button>
+                <button className='btn btn-primary' value='Tokyo'>Tokyo</button>
               </div>
             </div>
             <input

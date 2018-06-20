@@ -3,7 +3,7 @@ import axios from 'axios';
 export function updateNameInfo(name) {
   return {
     type: 'UPDATE_NAME_INFO',
-    payload: { name }
+    payload: name
   };
 }
 
@@ -17,9 +17,7 @@ export function updateNameInfo(name) {
 export function addName(name) {
   return {
     type: 'ADD_NAME',
-    payload: {
-      name
-    }
+    payload: { name }
   }
 }
 
@@ -31,6 +29,6 @@ export function getWeather(name) {
       axios
         .get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=APIKEY`)
         .then(res => { res.data, console.log(res.data) })
-        .catch(err => {console.log(err.message)})
+        .catch(err => { console.log(err.message) })
   }
 }

@@ -18,7 +18,7 @@ export default function SearchReducer(state = defaultState, action) {
     case 'UPDATE_NAME_INFO': {
       return {
         ...state,
-        name: payload.name
+        name: payload
       };
     }
 
