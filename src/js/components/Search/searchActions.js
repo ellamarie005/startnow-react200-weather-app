@@ -14,9 +14,9 @@ export function updateNameInfo(name) {
 //   };
 // }
 
-export function addName(name) {
+export function searchName(name) {
   return {
-    type: 'ADD_NAME',
+    type: 'SEARCH_NAME',
     payload: { name }
   }
 }

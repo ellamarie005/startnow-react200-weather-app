@@ -13,24 +13,29 @@ class WeatherInfo extends React.Component {
           <div className='row'>
             <div className='card col-sm-4'>
               <div className='card-body'>Temperature(F)</div>
-              <div>{searchItems.humidity}</div>
+              <div>{searchItems.temp}</div>
             </div>
             <div className='card col-sm-4'>
               <div className='card-body'>Pressure</div>
+              <div>{searchItems.pressure}</div>
             </div>
             <div className='card col-sm-4'>
               <div className='card-body'>Humidity</div>
+              <div>{searchItems.humidity}</div>
             </div>
           </div>
           <div className='row'>
             <div className='card col-sm-4'>
               <div className='card-body'>Lowest Temperature(F)</div>
+              <div>{searchItems.lowTemp}</div>
             </div>
             <div className='card col-sm-4'>
               <div className='card-body'>Highest Temperature(F)</div>
+              <div>{searchItems.highTemp}</div>
             </div>
             <div className='card col-sm-4'>
               <div className='card-body'>Wind Speed</div>
+              <div>{searchItems.windSpeed}</div>
             </div>
           </div>
         </div>

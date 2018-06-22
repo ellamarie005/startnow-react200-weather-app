@@ -29,17 +29,23 @@ export default function SearchReducer(state = defaultState, action) {
     //   };
     // }
 
-    case 'ADD_NAME': {
-      const { name } = action.payload;
-      return {
-        name: '',
-        lineItems: [
-          ...state.lineItems,
-          { name }
-        ]
-      };
-    }
+    // case 'SEARCH_NAME': {
+    //   const { name } = action.payload;
+    //   return {
+    //     name: '',
+    //     lineItems: [
+    //       ...state.lineItems,
+    //       { name }
+    //     ]
+    //   };
+    // }
 
+    case 'GET_WEATHER_FULFILLED': {
+      return {
+        ...state,
+        name: name,
+      }
+    }
     default: {
       return state;
     }
