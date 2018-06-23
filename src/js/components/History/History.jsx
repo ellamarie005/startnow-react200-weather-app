@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class History extends React.Component {
+class History extends React.Component {
   render() {
     const {searchItems} = this.props;
     return (
@@ -23,3 +23,5 @@ export default class History extends React.Component {
     );
   }
 }
+
+export default History;

@@ -1,33 +1,26 @@
 import axios from 'axios';
 
-export function updateNameInfo(name) {
+export function updateCityInfo(city) {
   return {
-    type: 'UPDATE_NAME_INFO',
-    payload: name
+    type: 'UPDATE_CITY_INFO',
+    payload: city
   };
 }
 
-// export function updateHistory(name) {
+// export function searchCity(city) {
 //   return {
-//     type: 'UPDATE_HISTORY',
-//     payload: { name }
-//   };
+//     type: 'CITY',
+//     payload: { city }
+//   }
 // }
 
-export function searchName(name) {
-  return {
-    type: 'SEARCH_NAME',
-    payload: { name }
-  }
-}
-
-export function getWeather(name) {
-  console.log(name)
+export function getWeather(city) {
+  console.log(city)
   return {
     type: 'GET_WEATHER',
     payload:
       axios
-        .get(`http://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=APIKEY`)
+        .get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=APIKEY`)
         .then(res => { res.data, console.log(res.data) })
         .catch(err => { console.log(err.message) })
   }

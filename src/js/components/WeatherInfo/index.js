@@ -3,7 +3,7 @@ import WeatherInfo from './WeatherInfo';
 
 function mapStoreToProps(store) {
   return {
-    searchItems: store.search,
+    searchItems: store.search.lineItems,
   };
 }
 

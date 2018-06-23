@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  updateNameInfo,
+  updateCityInfo,
   searchName,
   getWeather
 } from './searchActions';
@@ -19,12 +19,11 @@ export default class Search extends React.Component {
     const { dispatch } = this.props;
     const { value } = event.target;
 
-    dispatch(updateNameInfo(value));
+    dispatch(updateCityInfo(value));
   }
-  handleSearchName(event) {
-    event.preventDefault();
-    const { name, dispatch } = this.props;
-    dispatch(getWeather(name));
+  handleSearchName() {
+    const { city, dispatch } = this.props;
+    dispatch(getWeather(city));
   }
 
   handleCityTab(event) {
@@ -42,7 +41,7 @@ export default class Search extends React.Component {
   }
 
   render() {
-    const { name } = this.props;
+    const { city } = this.props;
     return (
       <div>
         <form className='col-md-12 mb-3'>
@@ -57,11 +56,11 @@ export default class Search extends React.Component {
               </div>
             </div>
             <input
-              id='name'
+              id='city'
               type='text'
               className='form-control'
               placeholder='Enter name'
-              value={name}
+              value={city}
               onChange={this.handleNameInput}
             />
             <div className="input-group-append">

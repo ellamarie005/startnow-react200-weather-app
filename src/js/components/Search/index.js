@@ -3,8 +3,8 @@ import Search from './Search';
 
 function mapStoreToProps(store) {
   return {
-    name: store.search.name,
-    lineItems: store.search.lineItems
+    city: store.search.city,
+    // lineItems: store.search.lineItems
   };
 }
 
