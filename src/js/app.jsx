@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './components/Search';
-import WeatherInfo from './components/WeatherInfo';
+import WeatherInfo from './components/Weather';
 import History from './components/History';
 
 

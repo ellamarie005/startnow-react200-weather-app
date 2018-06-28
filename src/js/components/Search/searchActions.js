@@ -7,13 +7,6 @@ export function updateCityInfo(city) {
   };
 }
 
-// export function searchCity(city) {
-//   return {
-//     type: 'CITY',
-//     payload: { city }
-//   }
-// }
-
 export function getWeather(city) {
   console.log(city)
   return {

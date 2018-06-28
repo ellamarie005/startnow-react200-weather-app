@@ -1,14 +1,15 @@
 const defaultState = {
   city: '',
-  name: '',
-  lat: '',
-  long: '',
-  temp: '',
-  pressure: '',
-  humidity: '',
-  lowTemp: '',
-  hightTemp: '',
-  windSpeed: '',
+  // name: '',
+  // lat: '',
+  // long: '',
+  // temp: '',
+  // pressure: '',
+  // humidity: '',
+  // lowTemp: '',
+  // hightTemp: '',
+  // windSpeed: '',
+  weather: '',
   lineItems: []
 };
 
@@ -23,10 +24,17 @@ export default function SearchReducer(state = defaultState, action) {
       };
     }
 
+    case 'GET_WEATHER_FULFILLED': {
+      return {
+        ...state,
+        weather: payload
+      };
+    }
+
     case 'GET_WEATHER': {
       return {
         ...state,
-        name: payload.name,
+        // name: payload.name,
         lineItems: [
           ...state.lineItems,
           { name: payload.name }

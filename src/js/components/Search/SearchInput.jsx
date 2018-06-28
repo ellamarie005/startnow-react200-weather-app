@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   updateCityInfo,
-  searchName,
   getWeather
 } from './searchActions';
 

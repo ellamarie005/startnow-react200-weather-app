@@ -1,9 +1,11 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import WeatherInfo from './WeatherInfo';
 
 function mapStoreToProps(store) {
   return {
-    searchItems: store.search.lineItems,
+    // searchItems: store.search,
+    city: store.search.city,
+    weather: store.search.weather
   };
 }
 
