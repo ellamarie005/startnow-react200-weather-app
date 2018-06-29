@@ -1,15 +1,7 @@
 const defaultState = {
   city: '',
-  // name: '',
-  // lat: '',
-  // long: '',
-  // temp: '',
-  // pressure: '',
-  // humidity: '',
-  // lowTemp: '',
-  // hightTemp: '',
-  // windSpeed: '',
-  weather: '',
+  //name equal to ''(string), but need to change into object
+  name: {},
   lineItems: []
 };
 
@@ -25,22 +17,14 @@ export default function SearchReducer(state = defaultState, action) {
     }
 
     case 'GET_WEATHER_FULFILLED': {
+      //grabbing the data that's being pulled from the get weather action
       return {
         ...state,
-        weather: payload
+        name: payload.data,
+        lineItems: payload.data.name
       };
     }
 
-    case 'GET_WEATHER': {
-      return {
-        ...state,
-        // name: payload.name,
-        lineItems: [
-          ...state.lineItems,
-          { name: payload.name }
-        ]
-      }
-    }
     default: {
       return state;
     }

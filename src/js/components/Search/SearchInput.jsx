@@ -26,11 +26,8 @@ export default class Search extends React.Component {
   }
 
   handleCityTab(event) {
-    console.log(event.target.dataset);
-
     // need to stop button from refreshing
     event.preventDefault();
-
     const { dispatch } = this.props;
     // the dataset part is something you can use to call the 'data-blah' value from your html tag.
     //in this case the location is set as data-value for the buttons on top of the input tag.

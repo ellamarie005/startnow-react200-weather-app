@@ -4,7 +4,7 @@ import SearchInput from './SearchInput';
 function mapStoreToProps(store) {
   return {
     city: store.search.city,
-    weather: store.search.weather,
+    name: store.search.name,
     lineItems: store.search.lineItems
   };
 }
