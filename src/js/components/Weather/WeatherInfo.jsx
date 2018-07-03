@@ -6,6 +6,7 @@ class WeatherInfo extends Component {
   }
   render() {
     const { name } = this.props;
+    console.log(name)
     return (
       <div className='card text-center' >
         <h5 className='card-header alert alert-primary'>City Information</h5>
@@ -14,29 +15,31 @@ class WeatherInfo extends Component {
           <p>Lon/Lat: {name.coord && name.coord.lon}, {name.coord && name.coord.lat}</p>
           <hr className='bg-light' />
           <div className='row'>
-            <div className='card col-sm-4'>
-              <div className='card-body'>Temperature(F)</div>
-              <div>{name.main && name.main.temp}</div>
+            <div className='card col-sm-4 border-0'>
+              <div className='card-body'>
+                <p>Temperature(F)</p>
+                <p>{name.main && name.main.temp}</p>
+              </div>
             </div>
-            <div className='card col-sm-4'>
+            <div className='card col-sm-4 border-0'>
               <div className='card-body'>Pressure</div>
               <div>{name.main && name.main.pressure}</div>
             </div>
-            <div className='card col-sm-4'>
+            <div className='card col-sm-4 border-0'>
               <div className='card-body'>Humidity</div>
               <div>{name.main && name.main.humidity}</div>
             </div>
           </div>
           <div className='row'>
-            <div className='card col-sm-4'>
+            <div className='card col-sm-4 border-0'>
               <div className='card-body'>Lowest Temperature(F)</div>
               <div>{name.main && name.main.temp_min}</div>
             </div>
-            <div className='card col-sm-4'>
+            <div className='card col-sm-4 border-0'>
               <div className='card-body'>Highest Temperature(F)</div>
               <div>{name.main && name.main.temp_max}</div>
             </div>
-            <div className='card col-sm-4'>
+            <div className='card col-sm-4 border-0'>
               <div className='card-body'>Wind Speed</div>
               <div>{name.wind && name.wind.speed}</div>
             </div>

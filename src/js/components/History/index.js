@@ -3,7 +3,7 @@ import History from './HistoryData';
 
 function mapStoreToProps(store) {
   return {
-    name: store.search.name,
+    date: store.search.date,
     lineItems: store.search.lineItems
   };
 }

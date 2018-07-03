@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const defaultState = {
   city: '',
   //name equal to ''(string), but need to change into object
@@ -21,7 +23,7 @@ export default function SearchReducer(state = defaultState, action) {
       return {
         ...state,
         name: payload.data,
-        lineItems: [...state.lineItems, payload.data.name]
+        lineItems: [...state.lineItems, [payload.data.name, moment().format('MMMM Do YYYY, h:mm:ss a')]]
       };
     }
 

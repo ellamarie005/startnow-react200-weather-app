@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 class HistoryData extends React.Component {
   constructor(props) {
@@ -6,8 +7,7 @@ class HistoryData extends React.Component {
   }
 
   render() {
-    const { lineItems } = this.props;
-    console.log(lineItems);
+    const { lineItems} = this.props;
     return (
       <div>
         <div className='card'>
@@ -21,13 +21,13 @@ class HistoryData extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {lineItems.map((place, i) => {
-                  return
+                {lineItems.map((item, i) => {
+                  return (
                   <tr key={i}>
-                    <td>{place}</td>
-                    <td></td>
+                    <td>{item[0]}</td>
+                    <td>{item[1]}</td>
                   </tr>
-                })
+                )})
                 }
               </tbody>
             </table>
