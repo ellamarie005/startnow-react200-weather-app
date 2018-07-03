@@ -1,11 +1,5 @@
 import axios from 'axios';
-
-export function updateCityInfo(city) {
-  return {
-    type: 'UPDATE_CITY_INFO',
-    payload: city
-  };
-}
+import moment from 'moment';
 
 export function getWeather(city) {
   return {
@@ -17,4 +11,11 @@ export function getWeather(city) {
         // .then(res => { res.data, console.log(res.data) })
         // .catch(err => { console.log(err.message) })
   }
+}
+
+export function updateCityInfo(city) {
+  return {
+    type: 'UPDATE_CITY_INFO',
+    payload: city, date: moment().format('MMMM Do YYYY, h:mm:ss a')
+  };
 }

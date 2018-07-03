@@ -21,7 +21,7 @@ export default function SearchReducer(state = defaultState, action) {
       return {
         ...state,
         name: payload.data,
-        lineItems: payload.data.name
+        lineItems: [...state.lineItems, payload.data.name]
       };
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 class HistoryData extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
   }
 
@@ -21,18 +21,14 @@ class HistoryData extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                {Object.keys(lineItems).map((item, i) => {
+                {lineItems.map((place, i) => {
+                  return
                   <tr key={i}>
-                    <td>{item}</td>
+                    <td>{place}</td>
+                    <td></td>
                   </tr>
-                })}
-                {/* {Object.keys(lineItems).map((item, i) => {
-                  console.log();
-                  return (
-                    <tr key={i}>
-                      <td>{item.data && item.data.name}</td>
-                    </tr>)
-                })} */}
+                })
+                }
               </tbody>
             </table>
           </div>

@@ -14,17 +14,20 @@ export default class Search extends React.Component {
     this.handleCityTab = this.handleCityTab.bind(this);
   }
 
+  // for when the input changes
   handleNameInput(event) {
     const { dispatch } = this.props;
     const { value } = event.target;
-
     dispatch(updateCityInfo(value));
   }
+
+  // for the button
   handleSearchName() {
     const { city, dispatch } = this.props;
     dispatch(getWeather(city));
   }
 
+  // for the tabs on top of the input
   handleCityTab(event) {
     // need to stop button from refreshing
     event.preventDefault();
