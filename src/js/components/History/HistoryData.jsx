@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+
 
 class HistoryData extends React.Component {
   constructor(props) {
