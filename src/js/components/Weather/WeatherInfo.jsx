@@ -22,36 +22,46 @@ class WeatherInfo extends Component {
         <h5 className='card-header alert alert-primary'>City Information</h5>
         <div className='card-body'>
           <h3>{name.name}</h3>
-          <p>Lon/Lat: {name.coord && name.coord.lon}, {name.coord && name.coord.lat}</p>
+          <span>Lon/Lat: <p className='text-primary'>{name.coord && name.coord.lon}, {name.coord && name.coord.lat}</p></span>
           <hr className='bg-light' />
           <div className='row'>
             <div className='card col-sm-4 border-0'>
               <div className='card-body'>
-                <p>Temperature(F)</p>
-                <p>{name.main && name.main.temp}</p>
+                <h5 className='card-title'>Temperature(F)</h5>
+                <p className='card-text text-primary'>{name.main && name.main.temp}</p>
               </div>
             </div>
             <div className='card col-sm-4 border-0'>
-              <div className='card-body'>Pressure</div>
-              <div>{name.main && name.main.pressure}</div>
+              <div className='card-body'>
+                <h5 className='card-title'>Pressure</h5>
+                <p className='card-text text-primary'>{name.main && name.main.pressure}</p>
+              </div>
             </div>
             <div className='card col-sm-4 border-0'>
-              <div className='card-body'>Humidity</div>
-              <div>{name.main && name.main.humidity}</div>
+              <div className='card-body'>
+                <h5 className='card-title'>Humidity</h5>
+                <p className='card-text text-primary'>{name.main && name.main.humidity}</p>
+              </div>
             </div>
           </div>
           <div className='row'>
             <div className='card col-sm-4 border-0'>
-              <div className='card-body'>Lowest Temperature(F)</div>
-              <div>{name.main && name.main.temp_min}</div>
+              <div className='card-body'>
+                <h5 className='card-title'>Lowest Temperature(F)</h5>
+                <p className='card-text text-primary'>{name.main && name.main.temp_min}</p>
+              </div>
             </div>
             <div className='card col-sm-4 border-0'>
-              <div className='card-body'>Highest Temperature(F)</div>
-              <div>{name.main && name.main.temp_max}</div>
+              <div className='card-body'>
+                <h5 className='card-title'>Highest Temperature(F)</h5>
+                <p className='card-text text-primary'>{name.main && name.main.temp_max}</p>
+              </div>
             </div>
             <div className='card col-sm-4 border-0'>
-              <div className='card-body'>Wind Speed</div>
-              <div>{name.wind && name.wind.speed}</div>
+              <div className='card-body'>
+                <h5 className='card-title'>Wind Speed</h5>
+                <p className='card-text text-primary'>{name.wind && name.wind.speed}</p>
+              </div>
             </div>
           </div>
         </div>
