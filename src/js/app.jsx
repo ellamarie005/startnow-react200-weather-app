@@ -10,7 +10,7 @@ export default class App extends React.Component {
       <div className='container-fluid'>
         <div className='jumbotron mt-3'>
           <h1>Origin Weather Application</h1>
-          <p>Always know if you'll need an umbrella!</p>
+          <p>Always know if you won't need an umbrella, and need sunglasses instead!</p>
         </div>
         <div className='row'>
           <Search />
