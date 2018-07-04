@@ -4,6 +4,16 @@ class WeatherInfo extends Component {
   constructor(props) {
     super(props);
   }
+
+  //can have static default props and pass down the file thats in the data. so you wont have to trail
+  // static defaultProps: {
+  //   name: {
+  //     main: {
+
+  //     }
+  //   }
+  // }
+
   render() {
     const { name } = this.props;
     console.log(name)
