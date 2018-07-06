@@ -42,8 +42,7 @@ export default class Search extends React.Component {
   render() {
     const { city } = this.props;
     return (
-      <div>
-        <form className='col-md mb-3 mr-5'>
+        <form className='col-md mb-3'>
             <div className='input-group'>
               <div className='input-group'>
                 <div className='btn-group'>
@@ -67,7 +66,6 @@ export default class Search extends React.Component {
               </div>
             </div>
         </form>
-      </div>
     )
   }
 }

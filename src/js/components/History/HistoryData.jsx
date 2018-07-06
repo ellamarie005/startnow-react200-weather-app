@@ -13,7 +13,7 @@ class HistoryData extends React.Component {
         <div className='card'>
           <h5 className='card-header alert alert-primary'>Search History</h5>
           <div className='card-body'>
-            <table className='table table-striped'>
+            <table className='table table-striped border-0'>
               <thead>
                 <tr>
                   <th>City</th>

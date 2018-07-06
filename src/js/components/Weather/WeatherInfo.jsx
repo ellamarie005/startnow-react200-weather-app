@@ -22,7 +22,7 @@ class WeatherInfo extends Component {
         <h5 className='card-header alert alert-primary'>City Information</h5>
         <div className='card-body'>
           <h3>{name.name}</h3>
-          <span>Lon/Lat: <p className='text-primary'>{name.coord && name.coord.lon}, {name.coord && name.coord.lat}</p></span>
+          <h4>Lon/Lat: <h6 className='text-primary'>{name.coord && name.coord.lon} {name.coord && name.coord.lat}</h6></h4>
           <hr className='bg-light' />
           <div className='row'>
             <div className='card col-sm-4 border-0'>
