@@ -21,8 +21,15 @@ class WeatherInfo extends Component {
       <div className='card text-center' >
         <h5 className='card-header alert alert-primary'>City Information</h5>
         <div className='card-body'>
-          <h3>{name.name}</h3>
-          <h4>Lon/Lat: <h6 className='text-primary'>{name.coord && name.coord.lon} {name.coord && name.coord.lat}</h6></h4>
+          <h4>{name.name &&
+            <img
+              src={`http://openweathermap.org/img/w/${name.weather[0].icon}.png`}
+              alt='Weather icon'
+              className='weather-icon'
+            />
+          }
+            {name.name}</h4>
+       <h6>Lon/Lat: </h6><p className='text-primary'>{name.coord && name.coord.lon} {name.coord && name.coord.lat}</p>
           <hr className='bg-light' />
           <div className='row'>
             <div className='card col-sm-4 border-0'>
@@ -47,13 +54,13 @@ class WeatherInfo extends Component {
           <div className='row'>
             <div className='card col-sm-4 border-0'>
               <div className='card-body'>
-                <h5 className='card-title'>Lowest Temperature(F)</h5>
+                <h5 className='card-title'>Lowest Temp(F)</h5>
                 <p className='card-text text-primary'>{name.main && name.main.temp_min}</p>
               </div>
             </div>
             <div className='card col-sm-4 border-0'>
               <div className='card-body'>
-                <h5 className='card-title'>Highest Temperature(F)</h5>
+                <h5 className='card-title'>Highest Temp(F)</h5>
                 <p className='card-text text-primary'>{name.main && name.main.temp_max}</p>
               </div>
             </div>

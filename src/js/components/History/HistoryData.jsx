@@ -17,7 +17,7 @@ class HistoryData extends React.Component {
               <thead>
                 <tr>
                   <th>City</th>
-                  <th>Date</th>
+                  <th className='d-flex justify-content-end'>Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -25,7 +25,7 @@ class HistoryData extends React.Component {
                   return (
                   <tr key={i}>
                     <td>{item[0]}</td>
-                    <td>{item[1]}</td>
+                    <td className='d-flex justify-content-end'>{item[1]}</td>
                   </tr>
                 )})
                 }
